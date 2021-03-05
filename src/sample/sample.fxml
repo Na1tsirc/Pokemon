@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #1235B4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <GridPane layoutX="-1.0" layoutY="29.0" prefHeight="546.0" prefWidth="1000.0" style="-fx-background-color: #71A151;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="282.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="288.0" minHeight="0.0" prefHeight="250.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="289.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane fx:id="Fondopokemon1" onMousePressed="#colorCelda1" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="Nombrelabel1" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="191.0" text="Label" />
+                  <Label fx:id="Nivellabel1" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" />
+                  <Label fx:id="vida_label1" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" text="Label" />
+                  <ImageView fx:id="imagen1" fitHeight="150.0" fitWidth="270.0" layoutX="28.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="siguiente1" layoutX="255.0" layoutY="205.0" mnemonicParsing="false"  style="-fx-background-color: green;" text="siguiente" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Fondopokemon2" onMousePressed="#colorCelda2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Label fx:id="Nombrelabel2" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="172.0" text="Label" />
+                  <Label fx:id="Nivellabel2" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" />
+                  <Label fx:id="vida_label2" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" text="Label" />
+                  <ImageView fx:id="imagen2" fitHeight="150.0" fitWidth="270.0" layoutX="28.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="siguiente2" layoutX="255.0" layoutY="205.0" mnemonicParsing="false" style="-fx-background-color: green;" text="siguiente" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Fondopokemon3" onMousePressed="#colorCelda3" layoutX="344.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <Label fx:id="Nombrelabel3" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="183.0" text="Label" />
+                  <Label fx:id="Nivellabel3" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" />
+                  <Label fx:id="vida_label3" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" text="Label" />
+                  <ImageView fx:id="imagen3" fitHeight="150.0" fitWidth="270.0" layoutX="28.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="siguiente3" layoutX="255.0" layoutY="205.0" mnemonicParsing="false" style="-fx-background-color: green;" text="siguiente" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Fondopokemon4" onMousePressed="#colorCelda4" layoutX="677.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="Nombrelabel4" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="191.0" text="Label" />
+                  <Label fx:id="Nivellabel4" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" />
+                  <Label fx:id="vida_label4" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" text="Label" />
+                  <ImageView fx:id="imagen4" fitHeight="150.0" fitWidth="270.0" layoutX="28.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="siguiente4" layoutX="255.0" layoutY="205.0" mnemonicParsing="false" style="-fx-background-color: green;" text="siguiente" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Fondopokemon5" onMousePressed="#colorCelda5" layoutX="10.0" layoutY="260.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="Nombrelabel5" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="172.0" text="Label" />
+                  <Label fx:id="Nivellabel5" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" />
+                  <Label fx:id="vida_label5" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" text="Label" />
+                  <ImageView fx:id="imagen5" fitHeight="150.0" fitWidth="270.0" layoutX="28.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="siguiente5" layoutX="255.0" layoutY="205.0" mnemonicParsing="false" style="-fx-background-color: green;" text="siguiente" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Fondopokemon6" onMousePressed="#colorCelda6" layoutX="344.0" layoutY="260.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="Nombrelabel6" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="183.0" text="Label" />
+                  <Label fx:id="Nivellabel6" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" />
+                  <Label fx:id="vida_label6" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" text="Label" />
+                  <ImageView fx:id="imagen6" fitHeight="150.0" fitWidth="270.0" layoutX="28.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="siguiente6" layoutX="255.0" layoutY="205.0" mnemonicParsing="false" style="-fx-background-color: green;" text="siguiente" />
+               </children>
+            </AnchorPane>
+            <AnchorPane  prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <Button layoutX="219.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #C23C1F;" text="Salir" textFill="#fcfcfc">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <Label layoutX="39.0" layoutY="8.0" prefHeight="17.0" prefWidth="191.0" text="Elegir un pokemon" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
