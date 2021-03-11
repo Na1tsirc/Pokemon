@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="377.0" prefWidth="326.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerMochila">
+   <children>
+      <VBox prefHeight="380.0" prefWidth="329.0">
+         <children>
+            <HBox prefHeight="80.0" prefWidth="330.0">
+               <children>
+                  <Label fx:id="pocion1" prefHeight="80.0" prefWidth="70.0" text="Label" />
+                  <Label fx:id="desc1" prefHeight="80.0" prefWidth="180.0" text="Label" />
+                  <ImageView fx:id="ipc1" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="80.0" prefWidth="330.0">
+               <children>
+                  <Label fx:id="pocion2" prefHeight="80.0" prefWidth="70.0" text="Label" />
+                  <Label fx:id="desc2" prefHeight="80.0" prefWidth="180.0" text="Label" />
+                  <ImageView fx:id="ipc2" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="80.0" prefWidth="330.0">
+               <children>
+                  <Label fx:id="pocion3" prefHeight="80.0" prefWidth="70.0" text="Label" />
+                  <Label fx:id="desc3" prefHeight="80.0" prefWidth="180.0" text="Label" />
+                  <ImageView fx:id="ipc3" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="80.0" prefWidth="330.0">
+               <children>
+                  <Label fx:id="pocion4" prefHeight="80.0" prefWidth="70.0" text="Label" />
+                  <Label fx:id="desc4" prefHeight="80.0" prefWidth="180.0" text="Label" />
+                  <ImageView fx:id="ipc4" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
