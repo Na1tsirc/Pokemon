@@ -24,6 +24,7 @@ public class Pokemon {
         return new Image(file.toURI().toString());
     }
 
+
     //la clase pokemon para convertir
     public static void convertirPokemon(Pokemon pokemones, Label nombre, Label nivel, Label vida, ImageView image){
         nombre.setText(pokemones.Nombre);
