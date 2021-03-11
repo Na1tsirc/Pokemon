@@ -80,7 +80,7 @@
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="Mochila" layoutX="56.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: #C23C1F;" text="Mochila" textFill="#fcfcfc">
+                  <Button fx:id="Mochila" disable="true" layoutX="56.0" layoutY="9.0" mnemonicParsing="false" onAction="#MochilaMochila" style="-fx-background-color: #C23C1F;" text="Mochila" textFill="#fcfcfc">
                      <font>
                         <Font size="14.0" />
                      </font>

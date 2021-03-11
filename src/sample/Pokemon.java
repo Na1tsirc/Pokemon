@@ -8,13 +8,13 @@ import java.io.File;
 public class Pokemon {
     String Nombre;
     String Nivel;
-    int Vida;
+    int vida;
     String Url;
 
     Pokemon(String Nombre, String Nivel, int Vida, String Url) {
         this.Nombre=Nombre;
         this.Nivel=Nivel;
-        this.Vida=Vida;
+        this.vida =Vida;
         this.Url=Url;
     }
 
@@ -29,8 +29,8 @@ public class Pokemon {
     public static void convertirPokemon(Pokemon pokemones, Label nombre, Label nivel, Label vida, ImageView image){
         nombre.setText(pokemones.Nombre);
         nivel.setText(pokemones.Nivel);
-        String vidaTotal=String.valueOf(pokemones.Vida);
-        String vidacambio=String.valueOf(pokemones.Vida);
+        String vidaTotal=String.valueOf(pokemones.vida);
+        String vidacambio=String.valueOf(pokemones.vida);
         vida.setText(vidacambio+"/"+vidaTotal);
         image.setImage(convertir(pokemones.Url));
     }
