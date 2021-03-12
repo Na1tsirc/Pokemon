@@ -3,6 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #1235B4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
@@ -21,54 +22,106 @@
          <children>
             <AnchorPane fx:id="Fondopokemon1" onMousePressed="#colorCelda1" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="Nombrelabel1" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="191.0" text="Label" />
-                  <Label fx:id="Nivellabel1" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" />
-                  <Label fx:id="vida_label1" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" text="Label" />
+                  <Label fx:id="Nombrelabel1" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="191.0" text="Label" textAlignment="CENTER">
+                     <font>
+                        <Font name="Impact" size="15.0" />
+                     </font></Label>
+                  <Label fx:id="Nivellabel1" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" textFill="#f2ff00" />
+                  <Label fx:id="vida_label1" alignment="CENTER" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" style="-fx-background-color: #BE5AFF;" text="Label" textFill="#45c6d7">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
                   <ImageView fx:id="imagen1" fitHeight="128.0" fitWidth="191.0" layoutX="72.0" layoutY="45.0" pickOnBounds="true" />
                   <ProgressBar fx:id="pbpk1" layoutX="67.0" layoutY="179.0" prefWidth="200.0" progress="0.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="Fondopokemon2" layoutX="10.0" layoutY="10.0" onMousePressed="#colorCelda2" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <Label fx:id="Nombrelabel2" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="172.0" text="Label" />
-                  <Label fx:id="Nivellabel2" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" />
-                  <Label fx:id="vida_label2" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" text="Label" />
+                  <Label fx:id="Nombrelabel2" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="172.0" text="Label" textAlignment="CENTER">
+                     <font>
+                        <Font name="Impact" size="15.0" />
+                     </font></Label>
+                  <Label fx:id="Nivellabel2" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label">
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.9490196108818054" green="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill></Label>
+                  <Label fx:id="vida_label2" alignment="CENTER" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" style="-fx-background-color: #BE5AFF;" text="Label" textFill="#45c6d7">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
                   <ImageView fx:id="imagen2" fitHeight="128.0" fitWidth="191.0" layoutX="71.0" layoutY="45.0" pickOnBounds="true" />
                   <ProgressBar fx:id="pbpk2" layoutX="67.0" layoutY="181.0" prefWidth="200.0" progress="0.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="Fondopokemon3" layoutX="344.0" layoutY="10.0" onMousePressed="#colorCelda3" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
-                  <Label fx:id="Nombrelabel3" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="183.0" text="Label" />
-                  <Label fx:id="Nivellabel3" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" />
-                  <Label fx:id="vida_label3" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" text="Label" />
+                  <Label fx:id="Nombrelabel3" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="183.0" text="Label" textAlignment="CENTER">
+                     <font>
+                        <Font name="Impact" size="15.0" />
+                     </font></Label>
+                  <Label fx:id="Nivellabel3" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" textFill="#f2ff00" />
+                  <Label fx:id="vida_label3" alignment="CENTER" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" style="-fx-background-color: #BE5AFF;" text="Label" textFill="#45c6d7">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
                   <ImageView fx:id="imagen3" fitHeight="128.0" fitWidth="191.0" layoutX="71.0" layoutY="45.0" pickOnBounds="true" />
                   <ProgressBar fx:id="pbpk3" layoutX="67.0" layoutY="181.0" prefWidth="200.0" progress="0.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="Fondopokemon4" layoutX="677.0" layoutY="10.0" onMousePressed="#colorCelda4" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <Label fx:id="Nombrelabel4" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="191.0" text="Label" />
-                  <Label fx:id="Nivellabel4" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" />
-                  <Label fx:id="vida_label4" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" text="Label" />
+                  <Label fx:id="Nombrelabel4" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="191.0" text="Label">
+                     <font>
+                        <Font name="Impact" size="15.0" />
+                     </font></Label>
+                  <Label fx:id="Nivellabel4" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" textFill="#f2ff00" />
+                  <Label fx:id="vida_label4" alignment="CENTER" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" style="-fx-background-color: #BE5AFF;" text="Label" textFill="#45c6d7">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
                   <ImageView fx:id="imagen4" fitHeight="116.0" fitWidth="191.0" layoutX="72.0" layoutY="45.0" pickOnBounds="true" />
                   <ProgressBar fx:id="pbpk4" layoutX="67.0" layoutY="178.0" prefWidth="200.0" progress="0.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="Fondopokemon5" layoutX="10.0" layoutY="260.0" onMousePressed="#colorCelda5" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Label fx:id="Nombrelabel5" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="172.0" text="Label" />
-                  <Label fx:id="Nivellabel5" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" />
-                  <Label fx:id="vida_label5" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" text="Label" />
+                  <Label fx:id="Nombrelabel5" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="172.0" text="Label">
+                     <font>
+                        <Font name="Impact" size="15.0" />
+                     </font></Label>
+                  <Label fx:id="Nivellabel5" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" textFill="#f2ff00" />
+                  <Label fx:id="vida_label5" alignment="CENTER" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" style="-fx-background-color: #BE5AFF;" text="Label" textFill="#45c6d7">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
                   <ImageView fx:id="imagen5" fitHeight="116.0" fitWidth="191.0" layoutX="71.0" layoutY="45.0" pickOnBounds="true" />
                   <ProgressBar fx:id="pbpk5" layoutX="67.0" layoutY="178.0" prefWidth="200.0" progress="0.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="Fondopokemon6" layoutX="344.0" layoutY="260.0" onMousePressed="#colorCelda6" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
-                  <Label fx:id="Nombrelabel6" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="183.0" text="Label" />
-                  <Label fx:id="Nivellabel6" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" />
-                  <Label fx:id="vida_label6" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" text="Label" />
+                  <Label fx:id="Nombrelabel6" layoutX="28.0" layoutY="28.0" prefHeight="17.0" prefWidth="183.0" text="Label">
+                     <font>
+                        <Font name="Impact" size="15.0" />
+                     </font></Label>
+                  <Label fx:id="Nivellabel6" layoutX="263.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Label" textFill="#f2ff00" />
+                  <Label fx:id="vida_label6" alignment="CENTER" layoutX="33.0" layoutY="209.0" prefHeight="17.0" prefWidth="74.0" style="-fx-background-color: #BE5AFF;" text="Label" textFill="#45c6d7">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
                   <ImageView fx:id="imagen6" fitHeight="116.0" fitWidth="191.0" layoutX="71.0" layoutY="45.0" pickOnBounds="true" />
                   <ProgressBar fx:id="pbpk6" layoutX="67.0" layoutY="176.0" prefWidth="200.0" progress="0.0" />
                </children>

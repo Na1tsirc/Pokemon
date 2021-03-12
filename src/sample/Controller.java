@@ -38,7 +38,7 @@ public class Controller {
     Label llevarvida;
 
         //declaracion de pokemons
-        Pokemon pokemon1 = new Pokemon("Kirby","100",1250,"src/Pociones/pocionespk4.png");
+        Pokemon pokemon1 = new Pokemon("AshGreninja","50",250,"src/Pokemon/ash_greninja.jpg");
         Pokemon pokemon2 = new Pokemon("Electiveri","75",197,"src/Pokemon/electivire.png");
         Pokemon pokemon3 = new Pokemon("Furret","80",500,"src/Pokemon/furret.gif");
         Pokemon pokemon4 = new Pokemon("Larvitar","63",125,"src/Pokemon/larvitar.jpg");
@@ -68,14 +68,13 @@ public class Controller {
     }
 
 
-    //Para poner modificar el ProgressBar segun el porcentaje y la vida
+    //Para poner modificar el ProgressBar segun el porcentaje y la vida y situarlo en un label con "/"
     public void vida_progres(Pokemon pokemon,double porcentaje,Label vida,ProgressBar pbpk){
         long vida_cambio = Math.round(pokemon.vida * (porcentaje));
         vida.setText(vida_cambio+"/"+pokemon.vida);
         pbpk.setProgress(porcentaje);
-
-
     }
+
     //sacar la vida que se quita en dos valores
 
 
@@ -88,7 +87,7 @@ public class Controller {
         Fondopokemon5.setStyle("-fx-background-color: null; ");
         Fondopokemon6.setStyle("-fx-background-color: null ; ");
     }
-    //Eventos de seleccion Rojo
+    //Eventos de seleccion por click y enviar datos(podria hacerse por funcion)
     public void colorCelda1() {
         vaciar();
         Fondopokemon1.setStyle("-fx-background-color: red; ");
@@ -96,7 +95,7 @@ public class Controller {
         llevarDatos= pokemon1;
         llevarbar=pbpk1;
         llevarvida=vida_label1;
-        System.out.println(pbpk1.getProgress());
+
 
     }
 
@@ -107,7 +106,6 @@ public class Controller {
         llevarDatos= pokemon2;
         llevarbar=pbpk2;
         llevarvida=vida_label2;
-
     }
 
     public void colorCelda3(MouseEvent mouseEvent) {
@@ -143,7 +141,6 @@ public class Controller {
         llevarDatos= pokemon6;
         llevarbar=pbpk6;
         llevarvida=vida_label6;
-
     }
 
     //Activar Boton
@@ -168,7 +165,8 @@ public class Controller {
             stage.initStyle(StageStyle.UNDECORATED);
             stage.show();
             ControllerMochila controllerMochila = loader.getController();
-            controllerMochila.mandarInfoDesdeVentana1(llevarDatos,llevarbar,llevarvida,this);
+
+            controllerMochila.mandarInfoDesdeVentana1(llevarDatos,llevarbar,llevarvida,this,stage);
 
 
         } catch (Exception e) {

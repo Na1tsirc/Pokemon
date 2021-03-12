@@ -1,11 +1,17 @@
 package sample;
 
+
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+import java.util.Optional;
 
 public class ControllerMochila {
     //nombre
@@ -21,13 +27,14 @@ public class ControllerMochila {
     @FXML
     HBox FP1,FP2,FP3,FP4;
 
+//Variables para usar mandar informacion
     Controller controller;
     Pokemon datos;
     ProgressBar bar;
     Label vida;
     double vida_plus;
-
-
+    int limitador;
+    Stage stage;
 
 
     //declaramos las pociones
@@ -45,30 +52,68 @@ public class ControllerMochila {
         Pociones.convertirPociones(pocionD,pocion4,desc4,ipc4);
     }
     //Selecionar objetos y vaciar
-    public void curar1(MouseEvent mouseEvent) {
+    public void curar1() {
         vaciar();
         FP1.setStyle("-fx-background-color: yellow; ");
+        if (vida_plus < datos.vida) {
+            if ((datos.vida - vida_plus) > pocionA.cantidad) {
+                updateVida(pocionA.cantidad);
 
-        updateVida(pocionA.cantidad);
+            } else {
+                bar.setProgress(1);
+                vida.setText(Math.round(datos.vida) + "/" + datos.vida);
+                alerta_cerrar();
+                cerrarVentana();
+
+            }
+        }
     }
 
     public void curar2(MouseEvent mouseEvent) {
         vaciar();
         FP2.setStyle("-fx-background-color: yellow; ");
-        updateVida(pocionB.cantidad);
+        if (vida_plus < datos.vida) {
+            if ((datos.vida - vida_plus) > pocionB.cantidad) {
+                updateVida(pocionB.cantidad);
+
+            } else {
+                bar.setProgress(1);
+                vida.setText(Math.round(datos.vida) + "/" + datos.vida);
+                alerta_cerrar();
+                cerrarVentana();
+            }
+        }
     }
 
     public void curar3(MouseEvent mouseEvent) {
         vaciar();
         FP3.setStyle("-fx-background-color: yellow; ");
-        updatePorcentaje(pocionC.cantidad);
+        if (vida_plus < datos.vida) {
+            if ((datos.vida - vida_plus) > (datos.vida*pocionC.cantidad)){
+                updatePorcentaje(pocionC.cantidad);
 
+            } else {
+                bar.setProgress(1);
+                vida.setText(Math.round(datos.vida) + "/" + datos.vida);
+                alerta_cerrar();
+                cerrarVentana();
+            }
+        }
     }
 
     public void curar4(MouseEvent mouseEvent) {
         vaciar();
         FP4.setStyle("-fx-background-color: yellow; ");
-        updatePorcentaje(pocionD.cantidad);
+        if (vida_plus < datos.vida) {
+            if ((datos.vida - vida_plus)> (datos.vida*pocionD.cantidad)){
+                updatePorcentaje(pocionD.cantidad);
+            } else {
+                bar.setProgress(1);
+                vida.setText(Math.round(datos.vida) + "/" + datos.vida);
+                alerta_cerrar();
+                cerrarVentana();
+            }
+        }
     }
     public void vaciar(){
         FP1.setStyle("-fx-background-color: null; ");
@@ -77,7 +122,7 @@ public class ControllerMochila {
         FP4.setStyle("-fx-background-color: null; ");
 
     }
-    //curar numero
+    //Obtener el porcentaje para la progresbar de curar por vida
     public double vpsbar(double vida,double cantidad){
         double resultado=Math.round(cantidad)*100/vida;
         double resultado_correcto=resultado/100;
@@ -85,32 +130,32 @@ public class ControllerMochila {
     }
 
 
-
+    //mandar informacion para actualizar
     @FXML
-    public void mandarInfoDesdeVentana1(Pokemon datos, ProgressBar bar,Label vida, Controller controller) {
+    public void mandarInfoDesdeVentana1(Pokemon datos, ProgressBar bar,Label vida, Controller controller,Stage stage) {
         this.datos=datos;
         this.bar=bar;
         this.vida=vida;
         this.controller=controller;
         this.vida_plus=datos.vida*0.5;
+        this.limitador=datos.vida;
+        this.stage=stage;
 
     }
-
+    //Actualizar la vida por cantidad de vida
      public void updateVida(double pocion){
         double comienzo=bar.getProgress();
-        //double nuevo=Math.round(datos.vida*comienzo);
-         //System.out.println(nuevo);
         double porcentaje=vpsbar(datos.vida,pocion);
         double resultado=comienzo+porcentaje;
-         System.out.println(porcentaje);
-         bar.setProgress(resultado);
+        bar.setProgress(resultado);
+        //aumento de vida por ps
+        double vida_cambio = Math.round(vida_plus)+ pocion;
 
-         //aumento de vida por ps
-         double vida_cambio = Math.round(vida_plus)+ pocion;
-         System.out.println(vida_cambio);
-         vida.setText(vida_cambio+"/"+datos.vida);
-         vida_plus=vida_cambio;
+        vida.setText(Math.round(vida_cambio)+"/"+datos.vida);
+        vida_plus=vida_cambio;
+
      }
+     //Actualizar la vida por porcentaje
      public void updatePorcentaje(double pocion){
          double comienzo=bar.getProgress();
          double resultado=comienzo+pocion;
@@ -118,11 +163,25 @@ public class ControllerMochila {
 
          double sumarvida= datos.vida*pocion;
          double vida_result=Math.round(vida_plus+sumarvida);
-         vida.setText(vida_result+"/"+datos.vida);
+         vida.setText(Math.round(vida_result)+"/"+datos.vida);
          vida_plus=vida_result;
 
 
      }
+     public void alerta_cerrar(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Confirmación");
+        alert.setContentText("El pokemon se ha curado completamente");
+        Optional<ButtonType> action = alert.showAndWait();
+
+
+
+    }
+    public void cerrarVentana() {
+
+        stage.close();
+    }
 
 
 
